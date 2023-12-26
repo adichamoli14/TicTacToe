@@ -30,6 +30,10 @@ function init(){
     boxes.forEach((box , index) => {
         box.innerText = '';
         boxes[index].style.pointerEvents = 'all';
+        // win k baad game reset mei green colour bhi chle jaega
+        box.classList.remove('win');
+        //reset all the css properties
+        // box.classList = `box box${index+1}`;
     });
     newGameBtn.classList.remove('active');
     gameInfo.innerText = `Current Player - ${currentPlayer}`;
@@ -81,6 +85,19 @@ function checkGameOver(){
         gameInfo.innerText = `Winner Player - ${konJeeta}`;
         newGameBtn.classList.add('active');
         return;
+    }
+
+    //check for game tie ho gya kya
+    let count = 0;
+    gameGrid.forEach((box) => {
+        if(box !== '')
+            count++;
+    });
+
+    //agr koi bhi box khali ni toh count 9 ho jaega
+    if(count === 9){
+        gameInfo.innerText = 'Game Tied !';
+        newGameBtn.classList.add('active');
     }
 }
 
