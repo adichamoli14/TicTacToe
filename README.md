@@ -29,7 +29,7 @@ To play the game, simply open the `index.html` file in a web browser that suppor
 3. Open `index.html` in a web browser.
 
 ## Live Link
-You can also access this project by visiting [this live link]()
+You can also access this project by visiting [this live link](https://adichamoli14.github.io/TicTacToe/)
 
 ## Contributing
 
